@@ -3,11 +3,11 @@
 请先获取对应的实验手册再开展实验，实验手册地址：
 
 * GitHub: http://github.com/ics-nju-wl/icspa-public-guide
-* Gitee: http://githee.com/ics-nju-wl/icspa-public-guide
+* Gitee: https://gitee.com/wlicsnju/icspa-public-guide
 
 本代码仓库及其镜像地址：
 
 
 * GitHub: http://github.com/ics-nju-wl/icspa-public
-* Gitee: http://gitee.com/ics-nju-wl/icspa-public
+* Gitee: https://gitee.com/wlicsnju/icspa-public
 
