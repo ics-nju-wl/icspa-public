@@ -1,0 +1,12 @@
+STU_ID = icspa_mooc_student
+
+# DO NOT modify the following code!!!
+GITFLAGS = -q --author='tracer-pa-public <tracer@njuics.org>' --no-verify --allow-empty
+
+# prototype: git_commit(msg)
+define git_commit
+	-@git add . -A --ignore-errors
+	-@while (test -e .git/index.lock); do sleep 0.1; done
+	-@(echo ">$(1)" && echo "> id" $(STU_ID) && echo -n "> user "; id -un && echo -n "> uname "; uname -a && echo -n "> uptime"; uptime && echo "> unitime" $(2) && echo -n "> "; (head -c 20 /dev/urandom | hexdump -v -e '"%02x"') && echo) | git commit -F - $(GITFLAGS)
+	-@sync
+endef

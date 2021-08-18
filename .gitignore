@@ -1,0 +1,73 @@
+# Prerequisites
+*.d
+*.i
+*.swp
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+*.img
+scripts/score_testcases/
+#kernel/src/memory/mm_malloc.o
+#!scripts/score_testcases/30000/*.img
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.log
+nemu/nemu
+kernel/kernel
+game/game
+testcase/objdump4nemu-i386
+testcase/bin/
+testcase/src/*
+!testcase/src/*.c
+!testcase/src/*.S
+game/data/
+*.wav
+*.rpg
+*.mkf
+*.dat
+*.msg
+*.asc
+*.fon
+.lock_tmux
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+scripts/.single_exec_res
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
