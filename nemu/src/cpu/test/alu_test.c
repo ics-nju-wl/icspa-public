@@ -476,7 +476,7 @@ void alu_test_imul() {
 				: "a" (a & 0xff), "c" (b & 0xff));
 
 			fflush(stdout);
-			assert((int32_t) res == (int32_t) sign_ext(res_asm_a, 16));
+			assert((int32_t) sign_ext(res, 16) == (int32_t) sign_ext(res_asm_a, 16));
 		}
 	}
 
@@ -493,7 +493,7 @@ void alu_test_imul() {
 			: "a" (a & 0xff), "c" (b & 0xff));
 
 			fflush(stdout);
-			assert((int32_t) res == (int32_t) sign_ext(res_asm_a, 16));
+			assert((int32_t) sign_ext(res, 16) == (int32_t) sign_ext(res_asm_a, 16));
 	}
 
 	for(i = 0 ; i < n ; i++) {

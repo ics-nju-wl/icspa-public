@@ -10,5 +10,3 @@
 
 * GitHub: http://github.com/ics-nju-wl/icspa-public
 * Gitee: https://gitee.com/wlicsnju/icspa-public
-
-请勿抄袭，请不要将答案公布于网络！

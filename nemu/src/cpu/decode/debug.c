@@ -5,10 +5,13 @@ char addr_str_2[50];
 char addr_str_3[50];
 #define MAX_INSTR_BYTES 13
 
+extern bool has_prefix;
+
 void print_asm_0(char *instr, char *suffix, uint8_t len)
 {
 	if (verbose)
 	{
+		len = has_prefix?len+1:len;
 		if (len > MAX_INSTR_BYTES)
 			len = MAX_INSTR_BYTES;
 		printf("%08x:   ", cpu.eip);
@@ -26,6 +29,7 @@ void print_asm_1(char *instr, char *suffix, uint8_t len, OPERAND *opr_1)
 {
 	if (verbose)
 	{
+		len = has_prefix?len+1:len;
 		if (len > MAX_INSTR_BYTES)
 			len = MAX_INSTR_BYTES;
 		parse_operand_address(opr_1, addr_str_1);
@@ -44,6 +48,7 @@ void print_asm_2(char *instr, char *suffix, uint8_t len, OPERAND *opr_1, OPERAND
 {
 	if (verbose)
 	{
+		len = has_prefix?len+1:len;
 		if (len > MAX_INSTR_BYTES)
 			len = MAX_INSTR_BYTES;
 		parse_operand_address(opr_1, addr_str_1);
@@ -63,6 +68,7 @@ void print_asm_3(char *instr, char *suffix, uint8_t len, OPERAND *opr_1, OPERAND
 {
 	if (verbose)
 	{
+		len = has_prefix?len+1:len;
 		if (len > MAX_INSTR_BYTES)
 			len = MAX_INSTR_BYTES;
 		parse_operand_address(opr_1, addr_str_1);

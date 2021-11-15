@@ -12,7 +12,7 @@ make_instr_func(imul_rm2r_v)
 	r.val = alu_imul(sign_ext(rm.val, data_size), sign_ext(r.val, data_size), data_size);
 	operand_write(&r);
 
-	print_asm_2("imul", "b", len, &rm, &r);
+	print_asm_2("imul", data_size == 16 ? "w" : "l", len, &rm, &r);
 	return len;
 }
 

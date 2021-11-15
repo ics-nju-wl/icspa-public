@@ -149,10 +149,10 @@ uint32_t internal_float_add(uint32_t b, uint32_t a)
 	uint32_t sig_a, sig_b, sig_res;
 	sig_a = fa.fraction;
 	if (fa.exponent != 0)
-		sig_a |= 0x800000; // the hidden 1
+		sig_a |= 0x800000; // the implied 1
 	sig_b = fb.fraction;
 	if (fb.exponent != 0)
-		sig_b |= 0x800000; // the hidden 1
+		sig_b |= 0x800000; // the implied 1
 
 	// alignment shift for fa
 	uint32_t shift = 0;
@@ -175,7 +175,7 @@ uint32_t internal_float_add(uint32_t b, uint32_t a)
 		shift--;
 	}
 
-	// fraction add
+	// significand add
 	if (fa.sign)
 	{
 		sig_a *= -1;
@@ -273,10 +273,10 @@ uint32_t internal_float_mul(uint32_t b, uint32_t a)
 	uint64_t sig_a, sig_b, sig_res;
 	sig_a = fa.fraction;
 	if (fa.exponent != 0)
-		sig_a |= 0x800000; // the hidden 1
+		sig_a |= 0x800000; // the implied 1
 	sig_b = fb.fraction;
 	if (fb.exponent != 0)
-		sig_b |= 0x800000; // the hidden 1
+		sig_b |= 0x800000; // the implied 1
 
 	if (fa.exponent == 0)
 		fa.exponent++;
@@ -347,10 +347,10 @@ uint32_t internal_float_div(uint32_t b, uint32_t a)
 	uint64_t sig_a, sig_b, sig_res;
 	sig_a = fa.fraction;
 	if (fa.exponent != 0)
-		sig_a |= 0x800000; // the hidden 1
+		sig_a |= 0x800000; // the implied 1
 	sig_b = fb.fraction;
 	if (fb.exponent != 0)
-		sig_b |= 0x800000; // the hidden 1
+		sig_b |= 0x800000; // the implied 1
 
 	// efforts to maintain the precision of the result
 	int shift = 0;

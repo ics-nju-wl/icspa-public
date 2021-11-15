@@ -24,7 +24,7 @@ NEWLIBC = $(NEWLIBC_DIR)/libc.a
 game: $(OBJS)
 	ld $(LDFLAGS) -e game_init -o game $(OBJS) $(NEWLIBC)
 	dd if=/dev/null of=game seek=2048
-	cat `find ./data/$(GAME)/ -type f | sort` >> game
+	cat `find ./data/$(GAME)/ -type f | sort -d` >> game
 
 -include $(OBJS:.o=.d)
 
