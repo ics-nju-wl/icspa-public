@@ -72,6 +72,7 @@ void reg_test()
 	uint32_t eip_sample = rand();
 	OPERAND r;
 	cpu.eip = eip_sample;
+	// type 1表示寄存器
 	r.type = OPR_REG;
 
 	int i;

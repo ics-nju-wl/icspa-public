@@ -29,6 +29,7 @@ typedef struct
 	uint32_t eip;
 
 	// EFLAGS
+	// 刻画当前CPU状态的寄存器
 	union {
 		struct
 		{
