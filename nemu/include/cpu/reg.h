@@ -1,6 +1,6 @@
 #ifndef __REG_H__
 #define __REG_H__
-
+// -fno-stack-protector 停用栈溢出保护
 #include "nemu.h"
 
 // define the structure of registers

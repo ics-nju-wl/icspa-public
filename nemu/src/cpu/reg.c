@@ -66,6 +66,7 @@ int get_reg_val(const char *reg, bool *success)
 
 void reg_test()
 {
+	// 随机数种子
 	srand(time(0));
 	uint32_t sample[8];
 	uint32_t eip_sample = rand();
