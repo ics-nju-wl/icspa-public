@@ -28,6 +28,10 @@ void set_SF(uint32_t result, size_t data_size)
 	result = sign_ext(result & set(data_size), data_size);
 	cpu.eflags.SF = sign(result);
 }
+void set_OF_add(uint32_t result, uint32_t src, uint32_t dest, size_t data_size)
+{
+
+}
 uint32_t alu_add(uint32_t src, uint32_t dest, size_t data_size)
 {
 #ifdef NEMU_REF_ALU
@@ -35,9 +39,9 @@ uint32_t alu_add(uint32_t src, uint32_t dest, size_t data_size)
 #else
 	uint32_t res = dest + src;
 	set_CF_add(res, src, data_size);
-	// set_PF(res);
+	set_PF(res);
 	set_ZF(res, data_size);
-	// set_SF(res, data_size);
+	set_SF(res, data_size);
 	// set_OF_add(res, src, dest, data_size);
 	return (res) & (0xffffffff >> (32 - data_size));
 #endif
